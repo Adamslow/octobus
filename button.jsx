@@ -2,7 +2,7 @@ import React from 'react'
 
 class Button extends React.Component {
   state = {
-    count:0
+    count:null
   };
 
 handleVote = () => {
