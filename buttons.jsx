@@ -34,9 +34,9 @@ class Buttons extends Component {
       count: null
     }
 
-    this.handleClick = this.handleClick.bind(this)
+    this.handleVote = this.handleVote.bind(this)
   }
-          handleClick() {
+          handleVote() {
             this.setState (prevState => {
               return {
                 count: prevState.count +1
@@ -52,13 +52,13 @@ class Buttons extends Component {
         <button
         type="button"
         className="btn btn-secondary"
-        onClick = {this.handleClick}>DEAL</button>
+        onClick = {this.handleVote}>DEAL</button>
         <button
-        onClick = {this.handleClick}
+        onClick = {this.handleVote}
         type="button"
         className="btn btn-secondary">NO DEAL</button>
         <button
-        onClick = {this.handleClick}
+        onClick = {this.handleVote}
         type="button"
         className="btn btn-secondary">NO BREXIT</button>
         </div>
