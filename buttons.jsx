@@ -53,10 +53,12 @@ class Buttons extends Component {
         type="button"
         className="btn btn-secondary"
         onClick = {this.handleVote}>DEAL</button>
+          <h1>{this.state.count}</h1>
         <button
         onClick = {this.handleVote}
         type="button"
         className="btn btn-secondary">NO DEAL</button>
+          <h1>{this.state.count}</h1>
         <button
         onClick = {this.handleVote}
         type="button"
