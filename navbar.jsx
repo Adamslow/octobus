@@ -1,17 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-
-class Navbar extends Component {
-  render() {
-    return(
-      <nav className="navbar navbar-light bg-light">
-  <span className="navbar-text">
-    VOTE!!!
-  </span>
+function Navbar() {
+  return (
+    <nav class="navbar navbar-light bg-light">
+<span class="navbar-brand mb-0 h1">VOTE!!!</span>
 </nav>
+  );
 
-    );
-  }
 }
 
 export default Navbar

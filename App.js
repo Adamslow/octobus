@@ -1,24 +1,18 @@
 import React, { Component } from 'react';
-import './styles/App.css';
-import Button from './components/button';
 import Navbar from './components/navbar';
+import './styles/App.css';
+import Body from './components/body';
+import Buttons from './components/buttons'
 
 class App extends Component {
   render() {
     return (
-      <div>
-
-        <Navbar />
-        <header className="App-header">
-          <p>BREXIT</p>
-
-          <span>
-          <Button />
-          <Button />
-          </span>
-          </header>
-
-
+      <div className='App'>
+         <Navbar />
+      <header className="App-header">
+         <Body />
+         <Buttons />
+      </header>
       </div>
     );
   }
