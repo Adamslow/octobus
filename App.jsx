@@ -114,6 +114,7 @@ class App extends Component {
   this.addVoteNobrexit = () => this.setState ({ voteNobrexit: this.state.voteNobrexit +1})
   }
   render() {
+    console.log('render')
     return(
 
       <div style = {{textAlign: 'center',
