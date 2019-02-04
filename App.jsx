@@ -41,10 +41,6 @@ class App extends Component {
 };
 
 
-
-
-
-
 export default App
 
 
@@ -78,9 +74,8 @@ class App extends Component {
   }
   render() {
     return(
-      <body  style = {{textAlign: 'center',
+      <div style = {{textAlign: 'center',
        background: 'linear-gradient(to bottom, #ff0066 0%, #660033 100%)'}}>
-      <div>
       <h1>VOTE!!!</h1>
       <h2>BREXIT</h2>
       <h3>{this.state.voteDeal}</h3>
@@ -92,14 +87,51 @@ class App extends Component {
 
 
       </div>
-      </body>
+      
+    );
+  }
+};
+
+export default App
+
+
+//Option 2
+import React, {Component} from 'react';
+
+class App extends Component {
+  constructor(props) {
+    console.log('constructor')
+    super(props)
+    this.state = {
+      voteDeal: null,
+      voteNodeal: null,
+      voteNobrexit: null,
+    };
+    
+  this.addVoteDeal = () => this.setState({voteDeal: this.state.voteDeal  + 1})
+  this.addVoteNodeal = () => this.setState ({ voteNodeal: this.state.voteNodeal +1})  
+  this.addVoteNobrexit = () => this.setState ({ voteNobrexit: this.state.voteNobrexit +1})
+  }
+  render() {
+    return(
+
+      <div style = {{textAlign: 'center',
+       background: 'linear-gradient(to bottom, #ff0066 0%, #660033 100%)'}}>
+      <h1>VOTE!!!</h1>
+      <h2>BREXIT</h2>
+      <h3>{this.state.voteDeal}</h3>
+      <button onClick = {this.addVoteDeal}>DEAL</button><br />
+      <h3>{this.state.voteNodeal}</h3>
+      <button onClick = {this.addVoteNodeal}>NO DEAL</button><br />
+      <h3>{this.state.voteNobrexit}</h3>
+      <button onClick = {this.addVoteNobrexit}>NO BREXIT</button>
+      </div>
+
     );
   }
 };
 
 
 
-
-
-
 export default App
+
